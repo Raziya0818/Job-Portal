@@ -1,0 +1,136 @@
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background:linear-gradient(to right, rgb(15, 23, 42), rgb(88, 12, 120), rgb(101, 9, 107));
+    color:#fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+   /* background-color: #f4f4f4da;*/
+    line-height: 1.6;
+}
+
+nav {
+    /*background-color: #4dd1e8e7;*/
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: yellowgreen;
+}
+
+/* Main content styling */
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Search Bar */
+#search-bar {
+    padding: 10px;
+    width: calc(100% - 24px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Job Listings */
+.job-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.job-card {
+    background-color: rgba(255, 255, 255, 0.47);
+    border: 1px solid #dddddd00;
+    border-radius: 5px;
+    width: calc(33% - 30px);
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h3 {
+    color: #c3ff00;
+    background: black;
+}
+
+.job-card p {
+    margin: 10px 0;
+}
+
+/* Apply Button */
+.apply-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #218838;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .job-card {
+        width: calc(100% - 30px);
+    }
+}
